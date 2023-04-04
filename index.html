@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardapio</title>
+</head>
+
+<body>
+    <h1>
+        Menu de Bebidas
+    </h1>
+    <h2>
+        Refrigerantes
+    </h2>
+    <div class="products" id="products">
+        <!-- <img src="https://www.drogariaminasbrasil.com.br/media/product/084/refrigerante-coca-cola-lata-350ml-80c.jpg"
+            alt="" srcset="">
+        <div>
+            <p class="product">Coca-Cola Lata 350ml</p>
+            <p class="price">5,00R$</p>
+        </div> -->
+    </div>
+</body>
+
+<script>
+    function getProducts() {
+        console.log('aaaaaaaa');
+        fetch('./products-list.json')
+            .then(response => response.json())
+            .then(data => {
+                const products = document.getElementById('products');
+                console.log(products);
+                data.products.forEach(product => {
+                    console.log(product);
+                    const img = document.createElement('img');
+                    img.setAttribute('src', (product.img ? product.img : "https://www.drogariaminasbrasil.com.br/media/product/084/refrigerante-coca-cola-lata-350ml-80c.jpg"));
+
+                    const firstParentDiv = document.createElement('div')
+                    const secondParentDiv = document.createElement('div');
+
+                    const p_name = document.createElement('p');
+                    p_name.setAttribute('class', 'name')
+                    p_name.innerText = product.name;
+                    secondParentDiv.appendChild(p_name)
+
+                    const p_price = document.createElement('p');
+                    p_price.setAttribute('class', 'price')
+                    p_price.innerText = `${product.price.toFixed(2)} R$`;
+                    secondParentDiv.appendChild(p_price)
+
+                    firstParentDiv.setAttribute('class', 'product')
+                    secondParentDiv.setAttribute('class', 'description')
+
+                    firstParentDiv.appendChild(img)
+                    firstParentDiv.appendChild(secondParentDiv)
+
+                    products.appendChild(firstParentDiv)
+                });
+            })
+    }
+    getProducts()
+</script>
+
+</html>
+
+<!--
+<div class="products">
+    <img src="https://www.drogariaminasbrasil.com.br/media/product/084/refrigerante-coca-cola-lata-350ml-80c.jpg"
+        alt="" srcset="">
+    <div>
+        <p class="product">Coca-Cola Lata 350ml</p>
+        <p class="price">5,00R$</p>
+    </div>
+</div> -->

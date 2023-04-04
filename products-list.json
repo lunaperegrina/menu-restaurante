@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "name": "Coca-Cola",
+            "price": 5.00,
+            "img": "https://www.drogariaminasbrasil.com.br/media/product/084/refrigerante-coca-cola-lata-350ml-80c.jpg"
+        },
+        {
+            "name": "Coca-Cola Zero",
+            "price": 5.00,
+            "img": "https://images.tcdn.com.br/img/img_prod/1115696/coca_cola_zero_350ml_6_und_31_1_33633f7ab9bd687f375469685e74eb91.jpg"
+        },
+        {
+            "name": "Guaraná",
+            "price": 5.00,
+            "img": "https://www.galaxcommerce.com.br/sistema/upload/1994/produtos/refrigerante-guarana-antarctica-lata-350-ml_2020-11-24_14-10-38_0_535.jpeg"
+        },
+        {
+            "name": "Guaraná Zero",
+            "price": 5.00,
+            "img": "https://loja.supermerclick.com.br/image/cache/catalog/produtos-integracao/002689-omie___guarana-antarctica-350ml-zero-acucares__conv-1000x1000.jpg"
+        }
+    ]
+}
